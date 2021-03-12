@@ -92,4 +92,5 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties libman_1json__JsonSchema="https://json.schemastore.org/ninjs-1.3.json" /></VisualStudio></ProjectExtensions>
 </Project>

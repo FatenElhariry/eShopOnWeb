@@ -38,7 +38,7 @@ namespace Microsoft.eShopWeb.PublicApi.AuthEndpoints
             // To enable password failures to trigger account lockout, set lockoutOnFailure: true
             //var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: true);
             var result = await _signInManager.PasswordSignInAsync(request.Username, request.Password, false, true);
-
+            
             response.Result = result.Succeeded;
             response.IsLockedOut = result.IsLockedOut;
             response.IsNotAllowed = result.IsNotAllowed;

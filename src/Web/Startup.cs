@@ -43,20 +43,20 @@ namespace Microsoft.eShopWeb.Web
         public void ConfigureDevelopmentServices(IServiceCollection services)
         {
             // use in-memory database
-            ConfigureInMemoryDatabases(services);
+            //ConfigureInMemoryDatabases(services);
 
             // use real database
-            //ConfigureProductionServices(services);
+            ConfigureProductionServices(services);
         }
 
-        public void ConfigureDockerServices(IServiceCollection services)
-        {
-            services.AddDataProtection()
-                .SetApplicationName("eshopwebmvc")
-                .PersistKeysToFileSystem(new DirectoryInfo(@"./"));
+        //public void ConfigureDockerServices(IServiceCollection services)
+        //{
+        //    services.AddDataProtection()
+        //        .SetApplicationName("eshopwebmvc")
+        //        .PersistKeysToFileSystem(new DirectoryInfo(@"./"));
 
-            ConfigureDevelopmentServices(services);
-        }
+        //    ConfigureDevelopmentServices(services);
+        //}
 
         private void ConfigureInMemoryDatabases(IServiceCollection services)
         {
@@ -89,6 +89,7 @@ namespace Microsoft.eShopWeb.Web
         public void ConfigureTestingServices(IServiceCollection services)
         {
             ConfigureInMemoryDatabases(services);
+            //ConfigureProductionServices();
         }
 
 
